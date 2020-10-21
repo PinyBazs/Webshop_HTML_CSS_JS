@@ -1,0 +1,265 @@
+@import 'styles/variables/0-fonts/fonts.scss';
+@import 'styles/variables/1-colors/colors.scss';
+@import 'styles/variables/2-mixins/mixins.scss';
+@import 'styles/variables/3-breakpoints/breakpoints.scss';
+@import 'styles/variables/4-images/images.scss';
+
+*{
+    @include borderAndMargin;
+    box-sizing: border-box;
+}
+body{
+    @include borderAndMargin;
+}
+
+.pic1{
+    width: $imageWidth;
+    height: $imageHeight;
+    background-image: url("images/p1.jpg");
+    animation: anim1 16s infinite;
+}
+.pic2{
+    width: $imageWidth;
+    height: $imageHeight;
+    background-image: url("images/y1.jpg");
+    animation: anim2 16s infinite;
+}
+.pic3{
+    width: $imageWidth;
+    height: $imageHeight;
+    background-image: url("images/g1.jpg");
+    animation: anim3 16s infinite;
+}
+.pic4{
+    width: $imageWidth;
+    height: $imageHeight;
+    background-image: url("images/pic1.jpg");
+    animation: anim4 16s infinite;
+}
+.slider{
+    @include flexCenter;
+}
+
+.top{
+    display: flex;
+    height: 10vh;
+}
+.xania{
+    font-family: $Lato;
+    color: $primary;
+    font-weight: $titleWeight;
+    font-size: $titleSize;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+}
+.logo, .links{
+    width: 50vw;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: $primary;
+    font-family: $Lato;
+    font-weight: $primaryWeight;
+    width: 5vw;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a:hover{
+    background-color: $links-hover;
+}
+a.sales{
+    color: white;
+    background-color: $primary;
+    border-radius: 6px;
+}
+a.sales:hover{
+    background-color: $sales-hover;
+}
+.sales-mobile{
+    color: white;
+    background-color: $primary;
+    border-radius: 6px;
+}
+.sales-mobile:hover{
+    background-color: $links-hover;
+}
+.footer{
+    @include flexCenter;
+    background-color: $footer;
+}
+.menu{
+    visibility: hidden;
+    cursor: pointer;
+}
+.links-mobile-view{
+    display: block;
+    float: right;
+}
+.mobile-link{
+    margin-top: 30px;
+}
+.header{
+    padding: 50px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.top-pics{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.top-p1, .top-p2, .top-p3, .top-p4, .top-p5{
+
+    padding: 10px;
+}
+span{
+    color: $span;
+    font-weight: $primaryWeight;
+}
+.tp{
+    width: 250px;
+}
+h1{
+    color: $primary;
+    font-family: $Lato;
+    font-weight: $primaryWeight;
+}
+.rating{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.datas{
+    display: flex;
+    justify-content: center;
+}
+.comments-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+}
+.profile-container{
+    width: 300px;
+    padding: 10px;
+
+}
+
+.profile{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.pp{
+    width: 100px;
+    border-radius: 50%;
+}
+.sp{
+    padding: 20px;
+}
+@keyframes anim1{
+    0%{
+        background-image: url("images/p1.jpg");
+    }
+    33%{
+        background-image: url("images/p2.jpg");
+    }
+    67%{
+        background-image: url("images/p3.jpg");
+    }
+    100%{
+        background-image: url("images/p1.jpg");
+    }
+}
+@keyframes anim2{
+    0%{
+        background-image: url("images/y1.jpg");
+    }
+    33%{
+        background-image: url("images/y2.jpg");
+    }
+    67%{
+        background-image: url("images/y3.jpg");
+    }
+    100%{
+        background-image: url("images/y1.jpg");
+    }
+}
+@keyframes anim3{
+    0%{
+        background-image: url("images/g1.jpg");
+    }
+    33%{
+        background-image: url("images/g2.jpg");
+    }
+    67%{
+        background-image: url("images/g3.jpg");
+    }
+    100%{
+        background-image: url("images/g1.jpg");
+    }
+}
+@keyframes anim4{
+    0%{
+        background-image: url("images/pic1.jpg");
+    }
+    33%{
+        background-image: url("images/pic2.jpg");
+    }
+    67%{
+        background-image: url("images/pic3.jpg");
+    }
+    100%{
+        background-image: url("images/pic1.jpg");
+    }
+}
+@media screen and (max-width: $tablet){
+    a.link, a.sales{
+        visibility: hidden;
+    }
+    .menu{
+        visibility: visible;
+    }
+
+    .pic1{
+
+        width: $imageTabletWidth;
+        height: $imageTabletHeight;
+        background-image: url("images/p1.jpg");
+        animation: anim1 16s infinite;
+    }
+    .pic2{
+        width: $imageTabletWidth;
+        height: $imageTabletHeight;
+        background-image: url("images/y1.jpg");
+        animation: anim2 16s infinite;
+    }
+    .pic3{
+        width: $imageTabletWidth;
+        height: $imageTabletHeight;
+        background-image: url("images/g1.jpg");
+        animation: anim3 16s infinite;
+    }
+    .pic4{
+        width: $imageTabletWidth;
+        height: $imageTabletHeight;
+        background-image: url("images/pic1.jpg");
+        animation: anim4 16s infinite;
+    }
+}
